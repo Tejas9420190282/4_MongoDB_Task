@@ -1,0 +1,101 @@
+
+
+https://www.notion.so/hemanshu/Arrange-daily-expense-API-task-224751be1263802893c0e3d737578cb9
+
+
+
+# Arrange daily expense API task
+
+---
+
+### 🔥 Task: Daily Expense Tracker API
+
+**Objective**
+
+Build a REST API to track a user's daily expenses. The API should allow:
+
+- Recording expenses
+- Returning total spent, category-wise breakdown, and highest expense for a specific day
+
+---
+
+### 🧠 Data Model
+
+**Expense**
+
+- `id`: Auto ID
+- `user`: String
+- `amount`: Number
+- `category`: String (Food, Transport, Shopping, Other)
+- `date`: Date (e.g., 2025-06-28)
+
+---
+
+### 📦 Endpoints to Implement
+
+1. **POST /expenses**
+    
+    Add a new expense.
+    
+    **Request Body Example:**
+    
+    ```json
+    {
+      "user": "john",
+      "amount": 250,
+      "category": "Food",
+      "date": "2025-06-28"
+    }
+    
+    ```
+    
+2. **GET /expenses/summary?user=john&date=2025-06-28**
+    
+    Return a daily summary for the user with:
+    
+    - Total spent
+    - Category-wise totals
+    - Highest single expense
+    
+    **Example Response:**
+    
+    ```json
+    {
+      "date": "2025-06-28",
+      "total": 730,
+      "categoryBreakdown": {
+        "Food": 250,
+        "Transport": 180,
+        "Shopping": 300
+      },
+      "highestExpense": {
+        "amount": 300,
+        "category": "Shopping"
+      }
+    }
+    ```
+    
+3. Generate and create Download a PDF or excel file with the Summary report 
+
+---
+
+⚙️ Tech Stack
+
+- Node.js + Express
+- Database: MongoDB (preferred), or SQLite/PostgreSQL
+
+---
+
+---
+
+### 🧪 Bonus (if time allows)
+
+- Add validation: no negative amounts
+- Add a new route for weekly total spending
+
+---
+
+### ⏱️ Estimated Time
+
+90 minutes
+
