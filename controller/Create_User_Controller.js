@@ -14,7 +14,7 @@ const Create_User_Controller = async (req, res) => {
             
             console.log(`All the inputs are Mandatory....`.bgRed);
             
-            res.status(404).json({
+            return res.status(404).json({
                 success : false,
                 message : "All the inputs are Mandatory....",
             })
