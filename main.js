@@ -2,6 +2,7 @@
 const express = require('express');
 const colors = require('colors');
 const { connectDB } = require('./config/db');
+const { Create_User_Router } = require('./router/Create_User_Router');
 
 
 const app = express();
@@ -9,6 +10,10 @@ const app = express();
 app.use(express.json());
 
 app.use(express.urlencoded({extended: true}));
+
+
+app.use(Create_User_Router);
+
 
 
 
