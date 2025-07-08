@@ -1,3 +1,6 @@
+
+// Categiri_Schema.js 
+
 const { default: mongoose } = require("mongoose");
 
 const Categiri_Schema = new mongoose.Schema({
@@ -14,5 +17,4 @@ const Categiri_Schema = new mongoose.Schema({
 })
 
 exports.Categiri_Schema = Categiri_Schema;
-
 
